@@ -1,0 +1,384 @@
+/* ==========================================================
+   Layout compartilhado - Digitau Eletrônicos
+   Usado em: servicos.html e produtos.html
+   (pode ser reaproveitado em index, quem e fale)
+
+   Para mudar a identidade visual, edite só o bloco :root.
+   ========================================================== */
+:root {
+    /* Paleta oficial do projeto (card "Paleta de Cores" do Trello) */
+    --verde: #76A270;
+    --petroleo: #4D7A8F;
+    --azul: #1A4785;
+    --grafite: #5A6270;
+    --cinza: #CFCFCF;
+    --dourado: #CCA846;
+
+    /* Tons derivados da paleta (necessários p/ contraste e fundos) */
+    --azul-escuro: #0F2A52;   /* texto sobre dourado, rodapé */
+    --texto: #2F3542;         /* texto principal */
+    --fundo-suave: #F2F4F7;   /* fundo de seções alternadas */
+    --verde-claro: #E6EFE4;   /* fundo das etiquetas */
+
+    /* Tipografia (card "Tipografia / fonte" do Trello) */
+    --fonte: Verdana, Geneva, sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte);
+    color: var(--texto);
+    background: #fff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Foco visível para quem navega pelo teclado */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 3px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ---------- Cabeçalho ---------- */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid var(--cinza);
+    padding: 12px 0;
+}
+
+.site-header .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--azul);
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 14px;              /* área de clique confortável */
+    color: var(--grafite);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+.menu a:hover {
+    color: var(--azul);
+}
+
+.menu a.ativo {
+    color: var(--azul);
+    font-weight: bold;
+    border-bottom-color: var(--dourado);   /* indica a página atual */
+}
+
+/* ---------- Botões ---------- */
+.botao {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 2px solid var(--dourado);
+    background: var(--dourado);
+    color: var(--azul-escuro);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.botao:hover {
+    filter: brightness(0.92);
+}
+
+.botao-contorno {
+    background: transparent;
+    border-color: var(--azul);
+    color: var(--azul);
+}
+
+.botao-contorno:hover {
+    background: var(--azul);
+    color: #fff;
+    filter: none;
+}
+
+/* ---------- Topo da página (substitui o slider nas páginas internas) ---------- */
+.hero {
+    background: var(--azul);
+    color: #fff;
+    padding: 48px 0;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    margin-bottom: 24px;
+    color: #E3EAF5;
+}
+
+/* ---------- Seções ---------- */
+.secao {
+    padding: 56px 0;
+}
+
+.secao.suave {
+    background: var(--fundo-suave);
+}
+
+.secao h2 {
+    color: var(--azul);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.secao .subtitulo {
+    text-align: center;
+    color: var(--grafite);
+    margin-bottom: 32px;
+}
+
+/* ---------- Vantagens (3 círculos do wireframe) ---------- */
+.vantagens {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.vantagens li {
+    text-align: center;
+}
+
+.vantagens .circulo {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: var(--azul);
+    border: 4px solid var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vantagens .circulo img {
+    width: 44px;
+    height: 44px;
+}
+
+.vantagens h3 {
+    color: var(--azul);
+    margin-bottom: 6px;
+}
+
+.vantagens p {
+    color: var(--grafite);
+}
+
+/* ---------- Filtro ---------- */
+.filtro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.filtro[hidden] {
+    display: none;                   /* display:flex acima ignoraria o atributo hidden */
+}
+
+.filtro-rotulo {
+    color: var(--grafite);
+    margin-right: 4px;
+}
+
+.filtro button {
+    min-height: 44px;                /* alvo de toque confortável */
+    padding: 8px 18px;
+    border: 2px solid var(--azul);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--azul);
+    font-family: var(--fonte);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.filtro button:hover {
+    background: var(--fundo-suave);
+}
+
+.filtro button[aria-pressed="true"] {
+    background: var(--azul);
+    color: #fff;
+}
+
+.filtro-status {
+    color: var(--grafite);
+    font-size: 0.875rem;
+    margin-bottom: 24px;
+}
+
+/* ---------- Cards ---------- */
+.grade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    overflow: hidden;                /* arredonda a imagem junto com o card */
+}
+
+.card[hidden] {
+    display: none;                   /* garante que o filtro esconda o card */
+}
+
+.card-corpo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.etiqueta {
+    align-self: flex-start;
+    background: var(--verde-claro);
+    color: var(--azul-escuro);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: var(--azul);
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: var(--grafite);
+    margin-bottom: 20px;
+}
+
+.card .botao {
+    margin-top: auto;                /* empurra o botão para o fim do card */
+    align-self: flex-start;
+}
+
+/* ---------- Chamada final ---------- */
+.cta {
+    background: var(--petroleo);
+    color: #fff;
+    text-align: center;
+    padding: 48px 0;
+}
+
+.cta h2 {
+    margin-bottom: 12px;
+}
+
+.cta p {
+    margin-bottom: 24px;
+}
+
+/* ---------- Rodapé ---------- */
+.site-footer {
+    background: var(--azul-escuro);
+    color: #D5DDEA;
+    padding: 32px 0;
+    font-size: 0.875rem;
+}
+
+.site-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px 32px;
+}
+
+.site-footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+    .grade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .hero .container,
+    .vantagens,
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+}

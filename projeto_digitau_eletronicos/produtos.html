@@ -3,10 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>..:: Produtos e Serviços ::..</title>
+    <meta name="description" content="Teclados, mouses, cabos e plugs recondicionados e produtos feitos com peças reaproveitadas.">
+    <title>..:: Projeto Digitau Eletrônicos - Produtos ::..</title>
+    <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-<h1>Produtos e Serviços</h1>
-<a href="index.html">Index</a><br>        
+
+    <header class="site-header">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="img/logo-digitau.svg" alt="">
+                <span>Digitau Eletrônicos</span>
+            </a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="produtos.html" class="ativo" aria-current="page">Produtos</a></li>
+                    <li><a href="fale.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Topo da página -->
+        <section class="hero">
+            <div class="container">
+                <div>
+                    <h1>Eletrônicos com nova vida, testados e com garantia</h1>
+                    <p>
+                        Periféricos recondicionados e produtos feitos com peças reaproveitadas:
+                        qualidade para o dia a dia e menos lixo eletrônico no mundo.
+                    </p>
+                    <a class="botao" href="fale.html">Solicitar orçamento</a>
+                </div>
+                <img src="img/produtos/hero.svg" alt="Teclado, mouse e cabo recondicionados" width="480" height="360">
+            </div>
+        </section>
+
+        <!-- Vantagens -->
+        <section class="secao">
+            <div class="container">
+                <h2>Por que comprar da Digitau</h2>
+                <p class="subtitulo">Vantagens de escolher um produto recondicionado.</p>
+
+                <ul class="vantagens">
+                    <li>
+                        <div class="circulo"><img src="img/icones/escudo.svg" alt=""></div>
+                        <h3>Qualidade e garantia</h3>
+                        <p>Todo item é testado antes da venda e acompanha garantia.</p>
+                    </li>
+                    <li>
+                        <div class="circulo"><img src="img/icones/economia.svg" alt=""></div>
+                        <h3>Menor custo</h3>
+                        <p>Equipamentos duráveis por um valor menor que o de itens novos.</p>
+                    </li>
+                    <li>
+                        <div class="circulo"><img src="img/icones/folha.svg" alt=""></div>
+                        <h3>Sustentável</h3>
+                        <p>Cada compra evita descarte e reduz o consumo de novos recursos.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Filtro + lista de produtos -->
+        <section class="secao suave" id="lista-produtos">
+            <div class="container">
+                <h2>Nossos produtos</h2>
+                <p class="subtitulo">Itens recondicionados e peças reaproveitadas.</p>
+
+                <div class="filtro" role="group" aria-label="Filtrar produtos por categoria" hidden>
+                    <span class="filtro-rotulo">Filtrar por:</span>
+                    <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+                    <button type="button" data-filtro="recondicionado" aria-pressed="false">Recondicionados</button>
+                    <button type="button" data-filtro="reaproveitado" aria-pressed="false">Reaproveitados</button>
+                </div>
+                <p class="filtro-status" aria-live="polite"></p>
+
+                <div class="grade">
+                    <article class="card" data-categoria="recondicionado">
+                        <img src="img/produtos/teclado-recondicionado.svg" alt="Teclado recondicionado" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Recondicionado</span>
+                            <h3>Teclado recondicionado</h3>
+                            <p>Limpo, testado tecla por tecla e com garantia. Ideal para escritório e home office.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-categoria="recondicionado">
+                        <img src="img/produtos/mouse-recondicionado.svg" alt="Mouse recondicionado" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Recondicionado</span>
+                            <h3>Mouse recondicionado</h3>
+                            <p>Sensor e botões testados, higienizado e pronto para uso.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-categoria="recondicionado">
+                        <img src="img/produtos/cabo-testado.svg" alt="Cabo com plug testado" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Recondicionado</span>
+                            <h3>Cabos testados</h3>
+                            <p>Cabos com plugs em bom estado, testados e separados por tipo de conexão.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-categoria="recondicionado">
+                        <img src="img/produtos/kit-plugs.svg" alt="Kit de plugs e adaptadores recuperados" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Recondicionado</span>
+                            <h3>Kit de plugs e adaptadores</h3>
+                            <p>Plugs recuperados em kits, úteis para laboratórios, escolas e equipes de TI.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-categoria="reaproveitado">
+                        <img src="img/produtos/porta-objetos-teclas.svg" alt="Porta-objetos feito com teclas recicladas" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Reaproveitado</span>
+                            <h3>Porta-objetos de teclas</h3>
+                            <p>Peça única feita com teclas de teclados que seriam descartados. Ótimo para a mesa de trabalho.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-categoria="reaproveitado">
+                        <img src="img/produtos/chaveiro-tecla.svg" alt="Chaveiro feito com tecla reaproveitada" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Reaproveitado</span>
+                            <h3>Chaveiro de tecla</h3>
+                            <p>Brinde sustentável e personalizado, feito com teclas reaproveitadas. Indicado para empresas e eventos.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chamada final -->
+        <section class="cta">
+            <div class="container">
+                <h2>Precisa de uma quantidade maior?</h2>
+                <p>Atendemos pedidos para empresas, escolas e eventos. Fale com a gente.</p>
+                <a class="botao" href="fale.html">Falar com a Digitau</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Digitau Eletrônicos<br>Projeto acadêmico de empresa fictícia.</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="fale.html">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/filtro.js"></script>
 </body>
 </html>

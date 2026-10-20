@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coleta, recondicionamento e reciclagem de lixo eletrônico: teclados, cabos, plugs e periféricos.">
+    <title>..:: Projeto Digitau Eletrônicos - Serviços ::..</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="img/logo-digitau.svg" alt="">
+                <span>Digitau Eletrônicos</span>
+            </a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html" class="ativo" aria-current="page">Serviços</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="fale.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Topo da página -->
+        <section class="hero">
+            <div class="container">
+                <div>
+                    <h1>Do descarte ao reaproveitamento, com processo e comprovante</h1>
+                    <p>
+                        Coletamos, recondicionamos e reciclamos teclados, cabos, plugs e outros
+                        periféricos, para pessoas e empresas.
+                    </p>
+                    <a class="botao" href="fale.html">Solicitar orçamento</a>
+                </div>
+                <img src="img/servicos/hero.svg" alt="Teclado e cabo dentro de um símbolo de reciclagem" width="480" height="360">
+            </div>
+        </section>
+
+        <!-- Vantagens -->
+        <section class="secao">
+            <div class="container">
+                <h2>Por que escolher a Digitau</h2>
+                <p class="subtitulo">Três motivos para confiar o seu eletrônico a nós.</p>
+
+                <ul class="vantagens">
+                    <li>
+                        <div class="circulo"><img src="img/icones/folha.svg" alt=""></div>
+                        <h3>Impacto ambiental positivo</h3>
+                        <p>Menos lixo eletrônico no descarte comum e mais materiais voltando ao uso.</p>
+                    </li>
+                    <li>
+                        <div class="circulo"><img src="img/icones/escudo.svg" alt=""></div>
+                        <h3>Processo com comprovante</h3>
+                        <p>Você sabe o destino de cada item e recebe a confirmação da coleta.</p>
+                    </li>
+                    <li>
+                        <div class="circulo"><img src="img/icones/atendimento.svg" alt=""></div>
+                        <h3>Atendimento direto</h3>
+                        <p>Conversa objetiva, prazos claros e soluções adequadas à sua necessidade.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Filtro + lista de serviços -->
+        <section class="secao suave" id="lista-servicos">
+            <div class="container">
+                <h2>Nossos serviços</h2>
+                <p class="subtitulo">Escolha uma categoria para ver só o que interessa.</p>
+
+                <div class="filtro" role="group" aria-label="Filtrar serviços por categoria" hidden>
+                    <span class="filtro-rotulo">Filtrar por:</span>
+                    <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+                    <button type="button" data-filtro="coleta" aria-pressed="false">Coleta</button>
+                    <button type="button" data-filtro="recondicionamento" aria-pressed="false">Recondicionamento</button>
+                    <button type="button" data-filtro="reciclagem" aria-pressed="false">Reciclagem</button>
+                </div>
+                <p class="filtro-status" aria-live="polite"></p>
+
+                <div class="grade">
+                    <article class="card" data-categoria="coleta">
+                        <img src="img/servicos/coleta-pessoas.svg" alt="Caixa de coleta com teclado e cabo" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Coleta</span>
+                            <h3>Coleta para pessoas</h3>
+                            <p>Receba o seu lixo eletrônico em um ponto de coleta e garanta o destino correto para teclados, cabos e periféricos.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-categoria="coleta">
+                        <img src="img/servicos/coleta-corporativa.svg" alt="Prédio de empresa com caixas de coleta" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Coleta</span>
+                            <h3>Coleta corporativa</h3>
+                            <p>Recolhimento programado de periféricos e cabos da sua empresa, com comprovante de destinação.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-categoria="recondicionamento">
+                        <img src="img/servicos/recondicionamento-perifericos.svg" alt="Teclado sendo consertado com chave de ajuste" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Recondicionamento</span>
+                            <h3>Recondicionamento de periféricos</h3>
+                            <p>Teclados e outros periféricos são testados, limpos e reparados para voltar a funcionar com qualidade.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-categoria="recondicionamento">
+                        <img src="img/servicos/recondicionamento-cabos.svg" alt="Cabo com plug testado" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Recondicionamento</span>
+                            <h3>Recuperação de cabos e plugs</h3>
+                            <p>Cabos e plugs em bom estado passam por teste e voltam ao mercado como itens confiáveis.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-categoria="reciclagem">
+                        <img src="img/servicos/reciclagem-materiais.svg" alt="Ciclo de reciclagem com cabo e plug" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Reciclagem</span>
+                            <h3>Reciclagem de materiais</h3>
+                            <p>O que não tem conserto é separado por tipo de material (plástico, metais, cobre) para reaproveitamento.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+
+                    <article class="card" data-categoria="reciclagem">
+                        <img src="img/servicos/reaproveitamento.svg" alt="Porta-objetos feito de teclas recicladas" width="400" height="260" loading="lazy">
+                        <div class="card-corpo">
+                            <span class="etiqueta">Reciclagem</span>
+                            <h3>Reaproveitamento criativo</h3>
+                            <p>Peças que não voltam a ser eletrônicos viram produtos úteis e com valor comercial.</p>
+                            <a class="botao botao-contorno" href="fale.html">Pedir orçamento</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chamada final -->
+        <section class="cta">
+            <div class="container">
+                <h2>Tem eletrônicos parados na sua casa ou empresa?</h2>
+                <p>Fale com a gente e receba uma proposta clara e sem complicação.</p>
+                <a class="botao" href="fale.html">Falar com a Digitau</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Digitau Eletrônicos<br>Projeto acadêmico de empresa fictícia.</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="fale.html">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/filtro.js"></script>
+</body>
+</html>
