@@ -1,12 +1,452 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>..:: Quem Somos ::..</title>
+    <title>Quem Somos | DigitalU Eletrônicos</title>
+
+    <style>
+        /* Configurações gerais iguais às da página inicial */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #101923;
+            color: #CFCFCF;
+        }
+
+        /* Cabeçalho e navegação */
+        header {
+            background: #172633;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid #4D7A8F;
+        }
+
+        header h1 {
+            color: #76A270;
+            font-size: 26px;
+        }
+
+        header h1 span {
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #CFCFCF;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.ativo {
+            color: #76A270;
+        }
+
+        /* Apresentação principal da página Quem Somos */
+        .inicio {
+            padding: 75px 7%;
+            background: linear-gradient(120deg, #172633, #1A4785);
+            text-align: center;
+        }
+
+        .etiqueta {
+            color: #76A270;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .inicio h2 {
+            color: white;
+            font-size: 40px;
+            line-height: 1.2;
+            margin: 20px auto;
+            max-width: 850px;
+        }
+
+        .inicio h2 span {
+            color: #76A270;
+        }
+
+        .inicio p {
+            max-width: 780px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Conteúdo das seções */
+        .conteudo {
+            padding: 65px 7%;
+            text-align: center;
+        }
+
+        .conteudo h2 {
+            color: white;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .subtitulo {
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Cartões dos valores e objetivos */
+        .cartoes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .cartao {
+            background: #172633;
+            border: 1px solid #344957;
+            border-radius: 12px;
+            padding: 28px;
+            width: 280px;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .cartao:hover {
+            transform: translateY(-6px);
+            border-color: #76A270;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .icone {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .cartao h3 {
+            color: #76A270;
+            margin-bottom: 12px;
+        }
+
+        .cartao p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* Faixa de missão e visão */
+        .faixa {
+            margin: 0 7% 60px;
+            padding: 35px;
+            background: linear-gradient(100deg, #1A4785, #4D7A8F);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .faixa h2 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .faixa p {
+            line-height: 1.8;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Cartões da equipe */
+        .membro {
+            text-align: center;
+        }
+
+        .iniciais {
+            width: 68px;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #1A4785;
+            color: white;
+            border: 2px solid #76A270;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 auto 18px;
+        }
+
+        .membro h3 {
+            color: white;
+        }
+
+        .membro .cargo {
+            color: #76A270;
+            margin: 8px 0 12px;
+            font-size: 13px;
+        }
+
+        /* Botões */
+        .botao {
+            display: inline-block;
+            background: #76A270;
+            color: #101923;
+            padding: 14px 22px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 24px;
+        }
+
+        .botao:hover {
+            background: #CCA846;
+            transform: translateY(-3px);
+        }
+
+        /* Rodapé igual ao da página inicial */
+        footer {
+            background: #0B121A;
+            text-align: center;
+            padding: 28px 15px;
+            font-size: 13px;
+            line-height: 2;
+            margin-top: 20px;
+        }
+
+        footer strong {
+            color: #76A270;
+        }
+
+        /* Ajustes para celulares */
+        @media (max-width: 700px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .inicio {
+                padding: 55px 7%;
+            }
+
+            .inicio h2 {
+                font-size: 30px;
+            }
+
+            .conteudo h2 {
+                font-size: 26px;
+            }
+
+            .faixa {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<h1>Quem Somos</h1>
-<a href="index.html">Index</a><br>    
+
+    <!-- CABEÇALHO: mantém a mesma marca e navegação da Home -->
+    <header>
+        <h1>DigitalU <span>Eletrônicos</span></h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="quem-somos-digitalu.html" class="ativo">Quem Somos</a>
+            <a href="produtos-servicos.html">Produtos e Serviços</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- APRESENTAÇÃO: explica quem é a DigitalU -->
+    <section class="inicio">
+        <span class="etiqueta">CONHEÇA A DIGITALU</span>
+
+        <h2>
+            Transformando o <span>lixo eletrônico</span>
+            em novas oportunidades
+        </h2>
+
+        <p>
+            Somos um projeto voltado à reciclagem e ao reaproveitamento
+            de materiais eletrônicos. Queremos mostrar que componentes
+            que seriam descartados podem ter novas utilidades, ajudando
+            a reduzir o desperdício e contribuindo para um futuro mais
+            sustentável.
+        </p>
+    </section>
+
+    <!-- SOBRE: apresenta a proposta do projeto -->
+    <section class="conteudo">
+        <h2>Quem Somos</h2>
+
+        <p class="subtitulo">
+            A DigitalU Eletrônicos une tecnologia, criatividade e
+            responsabilidade ambiental. Nossa proposta é incentivar
+            o descarte correto de eletrônicos e estudar maneiras de
+            transformar materiais reaproveitáveis em produtos úteis
+            e com valor comercial.
+        </p>
+    </section>
+
+    <!-- VALORES: mostra os princípios do projeto -->
+    <section class="conteudo" style="padding-top: 0;">
+        <h2>Nossos Valores</h2>
+
+        <p class="subtitulo">
+            Acreditamos que pequenas mudanças na forma como lidamos
+            com a tecnologia podem contribuir para um ambiente melhor.
+        </p>
+
+        <div class="cartoes">
+
+            <!-- Valor 1: responsabilidade ambiental -->
+            <div class="cartao">
+                <div class="icone">♻️</div>
+                <h3>Sustentabilidade</h3>
+                <p>
+                    Incentivar o descarte correto e reduzir o desperdício
+                    de materiais eletrônicos.
+                </p>
+            </div>
+
+            <!-- Valor 2: tecnologia e criatividade -->
+            <div class="cartao">
+                <div class="icone">💻</div>
+                <h3>Inovação</h3>
+                <p>
+                    Buscar novas ideias para reaproveitar componentes
+                    e desenvolver soluções úteis.
+                </p>
+            </div>
+
+            <!-- Valor 3: acesso e reaproveitamento -->
+            <div class="cartao">
+                <div class="icone">🔧</div>
+                <h3>Reaproveitamento</h3>
+                <p>
+                    Dar atenção aos materiais que ainda podem ser
+                    utilizados em novos produtos.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MISSÃO: destaca o objetivo principal do projeto -->
+    <section class="faixa">
+        <h2>Nossa Missão</h2>
+        <p>
+            Transformar o modo como as pessoas enxergam o lixo eletrônico,
+            incentivando o reaproveitamento de materiais, a consciência
+            ambiental e a criação de novas possibilidades por meio
+            da tecnologia.
+        </p>
+
+        <a href="produtos-servicos.html" class="botao">
+            Conheça nossos produtos e serviços →
+        </a>
+    </section>
+
+    <!-- EQUIPE: integrantes do projeto -->
+    <section class="conteudo">
+        <h2> Nossa Equipe </h2>
+
+        <p class="subtitulo">
+            Um grupo unido pela tecnologia, pela inovação e pela
+            vontade de encontrar soluções para o descarte eletrônico.
+        </p>
+
+        <div class="cartoes">
+
+            <!-- Integrante 1 -->
+            <div class="cartao membro">
+                <div class="iniciais">GH</div>
+                <h3>Guilherme Henriques</h3>
+                <p class="cargo">Especialista em Hardware</p>
+                <p>Foco em componentes e equipamentos eletrônicos.</p>
+            </div>
+
+            <!-- Integrante 2 -->
+            <div class="cartao membro">
+                <div class="iniciais">MC</div>
+                <h3>Mario Cesar</h3>
+                <p class="cargo">Engenharia de Processos</p>
+                <p>Foco na organização e melhoria dos processos.</p>
+            </div>
+
+            <!-- Integrante 3 -->
+            <div class="cartao membro">
+                <div class="iniciais">MS</div>
+                <h3>Mateus Santos</h3>
+                <p class="cargo">Pesquisa e Desenvolvimento</p>
+                <p>Foco em ideias e soluções inovadoras.</p>
+            </div>
+
+            <!-- Integrante 4 -->
+            <div class="cartao membro">
+                <div class="iniciais">ML</div>
+                <h3>Mayara Leite</h3>
+                <p class="cargo">Sustentabilidade</p>
+                <p>Foco na responsabilidade ambiental do projeto.</p>
+            </div>
+
+            <!-- Integrante 5 -->
+            <div class="cartao membro">
+                <div class="iniciais">PH</div>
+                <h3>Pedro Henrique</h3>
+                <p class="cargo">Análise de Circuitos</p>
+                <p>Foco na análise e no reaproveitamento de componentes.</p>
+            </div>
+
+            <!-- Integrante 6 -->
+            <div class="cartao membro">
+                <div class="iniciais">RM</div>
+                <h3>Raphael Manzaro</h3>
+                <p class="cargo">Logística e Operações</p>
+                <p>Foco na organização dos materiais e operações.</p>
+            </div>
+
+            <!-- Integrante 7 -->
+            <div class="cartao membro">
+                <div class="iniciais">RL</div>
+                <h3>Robert Lacerda</h3>
+                <p class="cargo">Garantia e Testes</p>
+                <p>Foco em testes e avaliação de componentes.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ: mantém o padrão visual e os caminhos das páginas -->
+    <footer>
+        <p><strong>DigitalU Eletrônicos</strong></p>
+        <p>Tecnologia, inovação e sustentabilidade.</p>
+        <p>
+            <a href="index.html" style="color: #CFCFCF;">Home</a> |
+            <a href="quem-somos.html" style="color: #CFCFCF;">Quem Somos</a> |
+            <a href="produtos-servicos.html" style="color: #CFCFCF;">Produtos e Serviços</a> |
+            <a href="contato.html" style="color: #CFCFCF;">Contato</a>
+        </p>
+        <p>© 2026 DigitalU Eletrônicos. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
