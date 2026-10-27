@@ -3,12 +3,462 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>..:: Projeto Digitau Eletrônicos - Index ::..</title>
+
+    <!-- Nome da página -->
+    <title>DigitalU Eletrônicos | Tecnologia Sustentável</title>
+
+    <style>
+        /* Configurações gerais da página */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fundo e cores principais */
+        body {
+            background: #101923;
+            color: #CFCFCF;
+        }
+
+        /* Cabeçalho com menu */
+        header {
+            background: #172633;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid #4D7A8F;
+        }
+
+        /* Nome da empresa */
+        header h1 {
+            color: #76A270;
+            font-size: 26px;
+        }
+
+        header h1 span {
+            color: white;
+        }
+
+        /* Links de navegação */
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #CFCFCF;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #76A270;
+        }
+
+        /* Área principal de apresentação */
+        .inicio {
+            padding: 90px 7%;
+            background: linear-gradient(120deg, #172633, #1A4785);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Texto principal */
+        .apresentacao {
+            max-width: 600px;
+        }
+
+        /* Pequeno destaque acima do título */
+        .etiqueta {
+            color: #76A270;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .inicio h2 {
+            font-size: 42px;
+            color: white;
+            margin: 20px 0;
+            line-height: 1.2;
+        }
+
+        .inicio h2 span {
+            color: #76A270;
+        }
+
+        .inicio p {
+            line-height: 1.8;
+            margin-bottom: 28px;
+            color: #CFCFCF;
+        }
+
+        /* Botões de navegação */
+        .botao {
+            display: inline-block;
+            background: #76A270;
+            color: #101923;
+            padding: 14px 22px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: #CCA846;
+            transform: translateY(-3px);
+        }
+
+        /* Painel decorativo com elementos tecnológicos */
+        .painel {
+            width: 340px;
+            max-width: 100%;
+            padding: 30px;
+            background: rgba(10, 20, 32, 0.65);
+            border: 1px solid #4D7A8F;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(77, 122, 143, 0.2);
+        }
+
+        .painel h3 {
+            color: #76A270;
+            margin-bottom: 22px;
+        }
+
+        .item-tecnologia {
+            padding: 15px 0;
+            border-bottom: 1px solid #344957;
+        }
+
+        .item-tecnologia:last-child {
+            border-bottom: none;
+        }
+
+        .item-tecnologia strong {
+            color: white;
+        }
+
+        .item-tecnologia p {
+            margin: 6px 0 0;
+            font-size: 13px;
+        }
+
+        /* Faixa com os principais diferenciais */
+        .diferenciais {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px 7%;
+            background: #172633;
+            border-bottom: 1px solid #344957;
+        }
+
+        .diferencial {
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .diferencial strong {
+            display: block;
+            color: #76A270;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .diferencial p {
+            font-size: 13px;
+        }
+
+        /* Seção de serviços e soluções */
+        .conteudo {
+            padding: 70px 7%;
+            text-align: center;
+        }
+
+        .conteudo h2 {
+            color: white;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .subtitulo {
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Organização dos cartões */
+        .cartoes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-top: 40px;
+        }
+
+        /* Cartões com aparência tecnológica */
+        .cartao {
+            background: #172633;
+            border: 1px solid #344957;
+            border-radius: 12px;
+            padding: 28px;
+            width: 280px;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .cartao:hover {
+            transform: translateY(-6px);
+            border-color: #76A270;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .icone {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .cartao h3 {
+            color: #76A270;
+            margin-bottom: 12px;
+        }
+
+        .cartao p {
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* Chamada para conhecer a empresa */
+        .chamada {
+            margin: 0 7% 70px;
+            padding: 35px;
+            background: linear-gradient(100deg, #1A4785, #4D7A8F);
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .chamada h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .chamada p {
+            line-height: 1.6;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #0B121A;
+            text-align: center;
+            padding: 28px 15px;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        footer strong {
+            color: #76A270;
+        }
+
+        /* Ajustes para celulares */
+        @media (max-width: 700px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .inicio {
+                padding: 60px 7%;
+            }
+
+            .inicio h2 {
+                font-size: 32px;
+            }
+
+            .painel {
+                width: 100%;
+            }
+
+            .chamada {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<h1>Index - Projeto</h1>
-<a href="quem.html">Quem Somos</a><p>
-<a href="produtos.html">Produtos</a><br>
-<a href="fale.html">Fale Conosco</a><br>
+
+    <!-- CABEÇALHO: identidade visual e navegação -->
+    <header>
+        <h1>DigitalU <span>Eletrônicos</span></h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="quem-somos-digitalu.html">Quem Somos</a>
+            <a href="produtos-servicos.html">Produtos e Serviços</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- INÍCIO: apresentação principal da empresa -->
+    <section class="inicio">
+
+        <div class="apresentacao">
+            <span class="etiqueta">TECNOLOGIA COM PROPÓSITO</span>
+
+            <h2>
+                O futuro da tecnologia começa com
+                <span>novas possibilidades.</span>
+            </h2>
+
+            <p>
+                Na DigitalU Eletrônicos, acreditamos que a tecnologia
+                descartada pode ganhar uma nova vida. Reaproveitamos
+                materiais eletrônicos para criar soluções úteis,
+                incentivar a inovação e reduzir os impactos ambientais.
+            </p>
+
+            <a href="produtos-servicos.html" class="botao">
+                Veja nossos serviços →
+            </a>
+        </div>
+
+        <!-- PAINEL: destaque visual com temas tecnológicos -->
+        <div class="painel">
+            <h3>  DigitalU / Tech  </h3>
+
+            <div class="item-tecnologia">
+                <strong>♻ Reciclagem inteligente</strong>
+                <p>Novos destinos para resíduos eletrônicos.</p>
+            </div>
+
+            <div class="item-tecnologia">
+                <strong>⚙ Reaproveitamento de componentes</strong>
+                <p>Materiais que podem ganhar novas funções.</p>
+            </div>
+
+            <div class="item-tecnologia">
+                <strong>💡 Inovação sustentável</strong>
+                <p>Tecnologia e consciência ambiental juntas.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- DIFERENCIAIS: resumo das propostas da empresa -->
+    <section class="diferenciais">
+
+        <div class="diferencial">
+            <strong>♻ Reciclar</strong>
+            <p>Reduzir o descarte inadequado</p>
+        </div>
+
+        <div class="diferencial">
+            <strong>⚙ Reutilizar</strong>
+            <p>Valorizar materiais e componentes</p>
+        </div>
+
+        <div class="diferencial">
+            <strong>💻 Inovar</strong>
+            <p>Buscar novas soluções tecnológicas</p>
+        </div>
+
+        <div class="diferencial">
+            <strong>🌱 Preservar</strong>
+            <p>Contribuir com o meio ambiente</p>
+        </div>
+
+    </section>
+
+    <!-- SOLUÇÕES: principais áreas de atuação -->
+    <section class="conteudo">
+
+        <h2>Tecnologia que transforma</h2>
+
+        <p class="subtitulo">
+            Nosso projeto busca unir inovação, reaproveitamento
+            de materiais e responsabilidade ambiental para
+            transformar o lixo eletrônico em novas oportunidades.
+        </p>
+
+        <div class="cartoes">
+
+            <!-- Cartão 1: coleta e destinação -->
+            <div class="cartao">
+                <div class="icone">♻️</div>
+                <h3>Reciclagem eletrônica</h3>
+                <p>
+                    Incentivamos o descarte correto de equipamentos
+                    eletrônicos e a destinação adequada dos materiais.
+                </p>
+            </div>
+
+            <!-- Cartão 2: reaproveitamento -->
+            <div class="cartao">
+                <div class="icone">🔌</div>
+                <h3>Reaproveitamento</h3>
+                <p>
+                    Buscamos aproveitar componentes, cabos e outros
+                    materiais para desenvolver novos produtos úteis.
+                </p>
+            </div>
+
+            <!-- Cartão 3: inovação -->
+            <div class="cartao">
+                <div class="icone">💻</div>
+                <h3>Soluções tecnológicas</h3>
+                <p>
+                    Exploramos ideias que conectam tecnologia,
+                    criatividade e sustentabilidade.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CHAMADA: direciona o visitante para conhecer a empresa -->
+    <section class="chamada">
+
+        <div>
+            <h2>Faça parte dessa transformação.</h2>
+            <p>
+                Conheça nossa proposta e descubra novas formas
+                de dar valor à tecnologia.
+            </p>
+        </div>
+
+        <a href="quem-somos-digitalu.html" class="botao">
+            Conheça a DigitalU →
+        </a>
+
+    </section>
+
+    <!-- RODAPÉ: identificação e encerramento -->
+    <footer>
+        <p><strong>DigitalU Eletrônicos</strong></p>
+        <p>Tecnologia, inovação e sustentabilidade.</p>
+        <p>© 2026 DigitalU Eletrônicos. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
