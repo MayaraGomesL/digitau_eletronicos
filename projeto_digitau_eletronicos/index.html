@@ -215,6 +215,7 @@
             border-radius: 12px;
             padding: 28px;
             width: 280px;
+            max-width: 100%;
             text-align: left;
             transition: 0.3s;
         }
@@ -287,6 +288,12 @@
                 gap: 15px;
             }
 
+            /* Área de toque maior nos links do menu */
+            nav a {
+                display: inline-block;
+                padding: 10px 6px;
+            }
+
             .inicio {
                 padding: 60px 7%;
             }
@@ -301,6 +308,8 @@
 
             .chamada {
                 padding: 25px;
+                justify-content: center;
+                text-align: center;
             }
         }
     </style>
@@ -316,7 +325,7 @@
             <a href="index.html">Home</a>
             <a href="quem.html">Quem Somos</a>
             <a href="produtos.html">Produtos e Serviços</a>
-            <a href="contato.html">Contato</a>
+            <a href="fale.html">Contato</a>
         </nav>
     </header>
 
