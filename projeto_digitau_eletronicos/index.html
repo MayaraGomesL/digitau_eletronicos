@@ -6,6 +6,7 @@
 
     <!-- Nome da página -->
     <title>DigitaU Eletrônicos | Tecnologia Sustentável</title>
+    <link rel="icon" href="img/logo/digitau-simbolo.svg" type="image/svg+xml">
 
     <style>
         /* Configurações gerais da página */
@@ -35,13 +36,15 @@
         }
 
         /* Nome da empresa */
-        header h1 {
-            color: #76A270;
-            font-size: 26px;
+        /* Logo da empresa (link para a Home) */
+        .logo {
+            display: block;
         }
 
-        header h1 span {
-            color: white;
+        .logo img {
+            display: block;
+            height: 52px;
+            width: auto;
         }
 
         /* Links de navegação */
@@ -319,7 +322,9 @@
 
     <!-- CABEÇALHO: identidade visual e navegação -->
     <header>
-        <h1>DigitaU <span>Eletrônicos</span></h1>
+        <a class="logo" href="index.html">
+            <img src="img/logo/digitau-logo.svg" alt="DigitaU Eletrônicos - página inicial" width="162" height="52">
+        </a>
 
         <nav>
             <a href="index.html">Home</a>
