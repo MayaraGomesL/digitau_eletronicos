@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Teclados, mouses, headsets, monitores, notebooks e servidores recondicionados pela DigitaU Eletrônicos.">
     <title>Produtos e Serviços | DigitaU Eletrônicos</title>
+    <link rel="icon" href="img/logo/digitau-simbolo.svg" type="image/svg+xml">
 
     <style>
         /* Configurações gerais iguais às da página inicial */
@@ -32,13 +33,15 @@
             border-bottom: 1px solid #4D7A8F;
         }
 
-        header h1 {
-            color: #76A270;
-            font-size: 26px;
+        /* Logo da empresa (link para a Home) */
+        .logo {
+            display: block;
         }
 
-        header h1 span {
-            color: white;
+        .logo img {
+            display: block;
+            height: 52px;
+            width: auto;
         }
 
         nav {
@@ -324,7 +327,9 @@
 
     <!-- CABEÇALHO: mantém a mesma marca e navegação da Home -->
     <header>
-        <h1>DigitaU <span>Eletrônicos</span></h1>
+        <a class="logo" href="index.html">
+            <img src="img/logo/digitau-logo.svg" alt="DigitaU Eletrônicos - página inicial" width="162" height="52">
+        </a>
 
         <nav>
             <a href="index.html">Home</a>
