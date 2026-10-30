@@ -1,0 +1,412 @@
+/* =========================================================
+   DigitaU Eletrônicos – estilos compartilhados
+   Usado por todas as páginas. O que é exclusivo de uma
+   página fica no arquivo dela (home.css, quem.css...).
+   ========================================================= */
+
+/* Paleta e medidas: mudar aqui altera o site inteiro */
+:root {
+    --cor-fundo: #101923;
+    --cor-fundo-escuro: #0B121A;
+    --cor-superficie: #172633;
+    --cor-borda: #344957;
+    --cor-texto: #CFCFCF;
+    --cor-titulo: #FFFFFF;
+    --cor-verde: #76A270;
+    --cor-dourado: #CCA846;
+    --cor-azul: #1A4785;
+    --cor-azul-claro: #4D7A8F;
+
+    --margem-lateral: 7%;
+    --raio: 12px;
+    --transicao: 0.3s;
+
+    /* Controles nativos (select, barra de rolagem) no tema escuro */
+    color-scheme: dark;
+}
+
+/* Configurações gerais da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+}
+
+/* Campos de formulário usam a mesma fonte do site */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Foco visível para quem navega pelo teclado */
+:focus-visible {
+    outline: 3px solid var(--cor-dourado);
+    outline-offset: 3px;
+}
+
+/* Link "Pular para o conteúdo": só aparece ao usar o Tab */
+.pular-conteudo {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 10;
+    background: var(--cor-verde);
+    color: var(--cor-fundo);
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pular-conteudo:focus {
+    top: 16px;
+}
+
+/* ---------- Cabeçalho e menu ---------- */
+header {
+    background: var(--cor-superficie);
+    padding: 22px var(--margem-lateral);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid var(--cor-azul-claro);
+}
+
+/* Logo da empresa (link para a Home) */
+.logo {
+    display: block;
+}
+
+.logo img {
+    display: block;
+    height: 52px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 14px;
+    transition: var(--transicao);
+}
+
+/* aria-current="page" marca a página atual no menu */
+.menu a:hover,
+.menu a[aria-current="page"] {
+    color: var(--cor-verde);
+}
+
+/* ---------- Apresentação no topo de cada página ---------- */
+.inicio {
+    padding: 75px var(--margem-lateral);
+    background: linear-gradient(120deg, var(--cor-superficie), var(--cor-azul));
+    text-align: center;
+}
+
+/* Pequeno destaque acima do título.
+   Cinza claro em vez de verde: o verde sobre o azul do degradê
+   não tinha contraste suficiente (3,14:1). */
+.etiqueta {
+    color: var(--cor-texto);
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.inicio h1 {
+    color: var(--cor-titulo);
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 20px auto;
+    max-width: 850px;
+}
+
+.inicio h1 span {
+    color: var(--cor-verde);
+}
+
+.inicio p {
+    max-width: 780px;
+    margin: 0 auto 28px;
+    line-height: 1.8;
+}
+
+.inicio p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---------- Botões e links de ação ---------- */
+.botao {
+    display: inline-block;
+    background: var(--cor-verde);
+    color: var(--cor-fundo);
+    padding: 14px 22px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.botao:hover {
+    background: var(--cor-dourado);
+    transform: translateY(-3px);
+}
+
+/* Link em texto dentro de cartões */
+.link-seta {
+    margin-top: auto;
+    padding-top: 16px;
+    align-self: flex-start;
+    color: var(--cor-verde);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-seta:hover {
+    color: var(--cor-dourado);
+    text-decoration: underline;
+}
+
+/* ---------- Faixa com os principais diferenciais ---------- */
+.diferenciais {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px var(--margem-lateral);
+    background: var(--cor-superficie);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.diferencial {
+    text-align: center;
+    min-width: 150px;
+}
+
+.diferencial strong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--cor-verde);
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.diferencial p {
+    font-size: 13px;
+}
+
+/* ---------- Seções de conteúdo ---------- */
+.conteudo {
+    padding: 65px var(--margem-lateral);
+    text-align: center;
+}
+
+/* Duas seções seguidas não somam o espaçamento entre elas */
+.conteudo + .conteudo {
+    padding-top: 0;
+}
+
+.conteudo h2 {
+    color: var(--cor-titulo);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ---------- Cartões ---------- */
+.cartoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 35px;
+}
+
+/* Os cartões são informativos: no hover só a borda muda.
+   O movimento fica reservado para o que é clicável (botões). */
+.cartao {
+    background: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 28px;
+    width: 280px;
+    max-width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--transicao);
+}
+
+.cartao:hover {
+    border-color: var(--cor-verde);
+}
+
+.cartao h3 {
+    color: var(--cor-verde);
+    margin-bottom: 12px;
+}
+
+.cartao p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ---------- Ícones (SVG em img/icones) ---------- */
+.icone {
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 18px;
+}
+
+/* Ícone pequeno ao lado de um texto */
+.icone-texto {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+/* ---------- Chamada no fim da página ----------
+   Degradê entre dois azuis escuros da paleta: o botão verde e o
+   texto mantêm contraste em qualquer ponto da faixa (mínimo 3,14:1
+   para o botão e 5,90:1 para o texto), inclusive no celular. */
+.chamada {
+    margin: 0 var(--margem-lateral) 60px;
+    padding: 35px;
+    background: linear-gradient(100deg, var(--cor-azul), var(--cor-superficie));
+    border: 1px solid var(--cor-azul-claro);
+    border-radius: var(--raio);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.chamada h2 {
+    color: var(--cor-titulo);
+    margin-bottom: 10px;
+}
+
+.chamada p {
+    line-height: 1.6;
+}
+
+/* Variação com o conteúdo centralizado (Quem Somos) */
+.chamada-centro {
+    flex-direction: column;
+    text-align: center;
+}
+
+.chamada-centro p {
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+    background: var(--cor-fundo-escuro);
+    text-align: center;
+    padding: 28px 15px;
+    font-size: 13px;
+    line-height: 2;
+}
+
+footer strong {
+    color: var(--cor-verde);
+}
+
+.rodape-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 18px;
+}
+
+.rodape-links a {
+    color: var(--cor-texto);
+}
+
+.rodape-links a:hover {
+    color: var(--cor-verde);
+}
+
+/* ---------- Ajustes para celulares ---------- */
+@media (max-width: 700px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Área de toque maior nos links do menu */
+    .menu a {
+        display: inline-block;
+        padding: 10px 6px;
+    }
+
+    .inicio {
+        padding: 55px var(--margem-lateral);
+    }
+
+    .inicio h1 {
+        font-size: 30px;
+    }
+
+    .conteudo h2 {
+        font-size: 26px;
+    }
+
+    .chamada {
+        padding: 25px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* ---------- Menos movimento para quem pediu isso no sistema ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .botao:hover {
+        transform: none;
+    }
+}

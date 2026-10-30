@@ -7,323 +7,14 @@
     <title>Produtos e Serviços | DigitaU Eletrônicos</title>
     <link rel="icon" href="img/logo/digitau-simbolo.svg" type="image/svg+xml">
 
-    <style>
-        /* Configurações gerais iguais às da página inicial */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #101923;
-            color: #CFCFCF;
-        }
-
-        /* Cabeçalho e navegação */
-        header {
-            background: #172633;
-            padding: 22px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            border-bottom: 1px solid #4D7A8F;
-        }
-
-        /* Logo da empresa (link para a Home) */
-        .logo {
-            display: block;
-        }
-
-        .logo img {
-            display: block;
-            height: 52px;
-            width: auto;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        nav a {
-            color: #CFCFCF;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        nav a:hover,
-        nav a.ativo {
-            color: #76A270;
-        }
-
-        /* Apresentação principal da página */
-        .inicio {
-            padding: 75px 7%;
-            background: linear-gradient(120deg, #172633, #1A4785);
-            text-align: center;
-        }
-
-        .etiqueta {
-            color: #76A270;
-            letter-spacing: 3px;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .inicio h2 {
-            color: white;
-            font-size: 40px;
-            line-height: 1.2;
-            margin: 20px auto;
-            max-width: 850px;
-        }
-
-        .inicio h2 span {
-            color: #76A270;
-        }
-
-        .inicio p {
-            max-width: 780px;
-            margin: 0 auto 28px;
-            line-height: 1.8;
-        }
-
-        /* Faixa com os principais diferenciais */
-        .diferenciais {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 30px 7%;
-            background: #172633;
-            border-bottom: 1px solid #344957;
-        }
-
-        .diferencial {
-            text-align: center;
-            min-width: 150px;
-        }
-
-        .diferencial strong {
-            display: block;
-            color: #76A270;
-            font-size: 19px;
-            margin-bottom: 8px;
-        }
-
-        .diferencial p {
-            font-size: 13px;
-        }
-
-        /* Conteúdo das seções */
-        .conteudo {
-            padding: 65px 7%;
-            text-align: center;
-        }
-
-        .conteudo h2 {
-            color: white;
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-
-        .subtitulo {
-            max-width: 720px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        /* Imagem de destaque (antes e depois dos lotes) */
-        .destaque {
-            max-width: 900px;
-            margin: 35px auto 0;
-        }
-
-        .destaque img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border: 1px solid #344957;
-            border-radius: 12px;
-        }
-
-        .destaque figcaption {
-            margin-top: 12px;
-            font-size: 13px;
-            line-height: 1.7;
-        }
-
-        /* Cartões de produtos e serviços */
-        .cartoes {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 22px;
-            margin-top: 35px;
-        }
-
-        .cartao {
-            background: #172633;
-            border: 1px solid #344957;
-            border-radius: 12px;
-            padding: 28px;
-            width: 280px;
-            max-width: 100%;
-            text-align: left;
-            transition: 0.3s;
-        }
-
-        .cartao:hover {
-            transform: translateY(-6px);
-            border-color: #76A270;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .icone {
-            font-size: 30px;
-            margin-bottom: 18px;
-        }
-
-        .cartao h3 {
-            color: #76A270;
-            margin-bottom: 12px;
-        }
-
-        .cartao p {
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        /* Cartão de produto: imagem no topo, sem recortar a foto */
-        .produto {
-            width: 320px;
-            padding: 0;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .produto img {
-            width: 100%;
-            height: auto;            /* ignora o atributo height do HTML */
-            aspect-ratio: 3 / 2;
-            object-fit: contain;
-            background: #0B121A;
-            display: block;
-        }
-
-        .produto .texto {
-            padding: 24px 28px 28px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .produto .texto p {
-            margin-bottom: 20px;
-        }
-
-        .produto .botao {
-            margin-top: auto;
-            align-self: flex-start;
-        }
-
-        /* Botões */
-        .botao {
-            display: inline-block;
-            background: #76A270;
-            color: #101923;
-            padding: 14px 22px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .botao:hover {
-            background: #CCA846;
-            transform: translateY(-3px);
-        }
-
-        /* Foco visível para quem navega pelo teclado */
-        a:focus-visible {
-            outline: 3px solid #CCA846;
-            outline-offset: 3px;
-        }
-
-        /* Chamada para entrar em contato */
-        .chamada {
-            margin: 0 7% 70px;
-            padding: 35px;
-            background: linear-gradient(100deg, #1A4785, #4D7A8F);
-            border-radius: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
-
-        .chamada h2 {
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .chamada p {
-            line-height: 1.6;
-        }
-
-        /* Rodapé igual ao da página inicial */
-        footer {
-            background: #0B121A;
-            text-align: center;
-            padding: 28px 15px;
-            font-size: 13px;
-            line-height: 2;
-        }
-
-        footer strong {
-            color: #76A270;
-        }
-
-        /* Ajustes para celulares */
-        @media (max-width: 700px) {
-            header {
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav {
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .inicio {
-                padding: 55px 7%;
-            }
-
-            .inicio h2 {
-                font-size: 30px;
-            }
-
-            .conteudo h2 {
-                font-size: 26px;
-            }
-
-            .chamada {
-                padding: 25px;
-            }
-        }
-    </style>
+    <!-- Estilos: primeiro os comuns, depois os exclusivos desta página -->
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/produtos.css">
 </head>
 
 <body>
+
+    <a class="pular-conteudo" href="#principal">Pular para o conteúdo</a>
 
     <!-- CABEÇALHO: mantém a mesma marca e navegação da Home -->
     <header>
@@ -331,221 +22,226 @@
             <img src="img/logo/digitau-logo.svg" alt="DigitaU Eletrônicos - página inicial" width="162" height="52">
         </a>
 
-        <nav>
+        <nav class="menu" aria-label="Menu principal">
             <a href="index.html">Home</a>
             <a href="quem.html">Quem Somos</a>
-            <a href="produtos.html" class="ativo" aria-current="page">Produtos e Serviços</a>
+            <a href="produtos.html" aria-current="page">Produtos e Serviços</a>
             <a href="fale.html">Contato</a>
         </nav>
     </header>
 
-    <!-- APRESENTAÇÃO: o que a DigitaU entrega -->
-    <section class="inicio">
-        <span class="etiqueta">PRODUTOS E SERVIÇOS</span>
+    <main id="principal">
 
-        <h2>
-            Eletrônicos que seriam descartados,
-            <span>prontos para voltar ao mercado</span>
-        </h2>
+        <!-- APRESENTAÇÃO: o que a DigitaU entrega -->
+        <section class="inicio">
+            <span class="etiqueta">PRODUTOS E SERVIÇOS</span>
 
-        <p>
-            Recebemos lotes de teclados, mouses, headsets, monitores,
-            notebooks e servidores, com seus cabos e plugs. Fazemos a
-            triagem, a limpeza, a manutenção e os testes, e entregamos
-            tudo embalado e pronto para uso.
-        </p>
+            <h1>
+                Eletrônicos que seriam descartados,
+                <span>prontos para voltar ao mercado</span>
+            </h1>
 
-        <a href="#produtos" class="botao">Veja nossos produtos →</a>
-    </section>
-
-    <!-- DIFERENCIAIS: resumo da proposta -->
-    <section class="diferenciais">
-
-        <div class="diferencial">
-            <strong>✅ Qualidade</strong>
-            <p>Itens testados e funcionando</p>
-        </div>
-
-        <div class="diferencial">
-            <strong>💰 Economia</strong>
-            <p>Equipamentos duráveis por menos</p>
-        </div>
-
-        <div class="diferencial">
-            <strong>🌱 Sustentabilidade</strong>
-            <p>Menos lixo eletrônico descartado</p>
-        </div>
-
-    </section>
-
-    <!-- ANTES E DEPOIS: resultado do nosso trabalho -->
-    <section class="conteudo">
-        <h2>Do sucateado ao pronto para o mercado</h2>
-
-        <p class="subtitulo">
-            Veja como um lote muda depois de passar pelo nosso processo.
-        </p>
-
-        <figure class="destaque">
-            <img src="img/geral.png"
-                 alt="Comparação entre lotes sucateados e recondicionados de teclados, mouses, headsets e monitores, com as etapas do processo: recebimento e triagem, limpeza e manutenção, testes de funcionamento, embalagem segura e lote pronto para o mercado"
-                 width="1312" height="1199" loading="lazy">
-            <figcaption>
-                À esquerda, o estado em que os itens chegam. À direita, o lote
-                recondicionado, pronto para o mercado.
-            </figcaption>
-        </figure>
-    </section>
-
-    <!-- PRODUTOS: lotes recondicionados -->
-    <section class="conteudo" id="produtos" style="padding-top: 0;">
-        <h2>Nossos produtos</h2>
-
-        <p class="subtitulo">
-            Lotes recondicionados para empresas, escolas e revendedores.
-        </p>
-
-        <div class="cartoes">
-
-            <!-- Produto 1: teclados -->
-            <article class="cartao produto">
-                <img src="img/teclados.png"
-                     alt="Teclados sucateados de um lado e lote de teclados recondicionados, limpos e testados, do outro"
-                     width="1536" height="1024" loading="lazy">
-                <div class="texto">
-                    <h3>Teclados recondicionados</h3>
-                    <p>
-                        Teclados com marcas de uso e teclas faltando são limpos,
-                        reparados e testados. Voltam completos, funcionando e
-                        com o cabo organizado.
-                    </p>
-                    <a href="fale.html" class="botao">Solicitar orçamento →</a>
-                </div>
-            </article>
-
-            <!-- Produto 2: notebooks -->
-            <article class="cartao produto">
-                <img src="img/notebooks.jpg"
-                     alt="Lote de notebooks sucateados e lote de notebooks recondicionados, em caixas, prontos para venda"
-                     width="1024" height="559" loading="lazy">
-                <div class="texto">
-                    <h3>Notebooks recondicionados</h3>
-                    <p>
-                        Notebooks descartados são avaliados e reparados em
-                        bancada por nossa equipe técnica e entregues em
-                        lotes, prontos para venda.
-                    </p>
-                    <a href="fale.html" class="botao">Solicitar orçamento →</a>
-                </div>
-            </article>
-
-            <!-- Produto 3: servidores -->
-            <article class="cartao produto">
-                <img src="img/servidores.jpg"
-                     alt="Lote de servidores e componentes descartados e lote de servidores recondicionados, embalados e prontos para venda"
-                     width="1024" height="559" loading="lazy">
-                <div class="texto">
-                    <h3>Servidores recondicionados</h3>
-                    <p>
-                        Servidores e componentes são recuperados, testados
-                        e embalados, uma opção de menor custo para a
-                        infraestrutura de empresas.
-                    </p>
-                    <a href="fale.html" class="botao">Solicitar orçamento →</a>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- SERVIÇOS: etapas do processo -->
-    <section class="conteudo" id="servicos" style="padding-top: 0;">
-        <h2>Nossos serviços</h2>
-
-        <p class="subtitulo">
-            Cada lote passa pelas mesmas cinco etapas, do recebimento à entrega.
-        </p>
-
-        <div class="cartoes">
-
-            <!-- Etapa 1 -->
-            <div class="cartao">
-                <div class="icone">♻️</div>
-                <h3>Recebimento e triagem</h3>
-                <p>
-                    Recebemos o lixo eletrônico e separamos o que pode ser
-                    recondicionado do que será reciclado.
-                </p>
-            </div>
-
-            <!-- Etapa 2 -->
-            <div class="cartao">
-                <div class="icone">🔧</div>
-                <h3>Limpeza e manutenção</h3>
-                <p>
-                    Higienização, troca de peças e reparos para devolver
-                    o aspecto e o funcionamento dos equipamentos.
-                </p>
-            </div>
-
-            <!-- Etapa 3 -->
-            <div class="cartao">
-                <div class="icone">⚙️</div>
-                <h3>Testes de funcionamento</h3>
-                <p>
-                    Cada item é testado antes de seguir. Só sai o que está
-                    limpo e funcionando.
-                </p>
-            </div>
-
-            <!-- Etapa 4 -->
-            <div class="cartao">
-                <div class="icone">🛡️</div>
-                <h3>Embalagem segura</h3>
-                <p>
-                    Os itens são embalados com cuidado para chegar ao
-                    destino sem danos.
-                </p>
-            </div>
-
-            <!-- Etapa 5 -->
-            <div class="cartao">
-                <div class="icone">📦</div>
-                <h3>Lote pronto para o mercado</h3>
-                <p>
-                    Entregamos o lote organizado e identificado, pronto
-                    para venda ou uso.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CHAMADA: direciona o visitante para o contato -->
-    <section class="chamada">
-
-        <div>
-            <h2>Tem eletrônicos parados na sua empresa?</h2>
             <p>
-                Fale com a gente e descubra como transformar o descarte
-                em novas oportunidades.
+                Recebemos lotes de teclados, mouses, headsets, monitores,
+                notebooks e servidores, com seus cabos e plugs. Fazemos a
+                triagem, a limpeza, a manutenção e os testes, e entregamos
+                tudo embalado e pronto para uso.
             </p>
-        </div>
 
-        <a href="fale.html" class="botao">Fale conosco →</a>
+            <a href="#produtos" class="botao">Veja nossos produtos →</a>
+        </section>
 
-    </section>
+        <!-- DIFERENCIAIS: resumo da proposta -->
+        <section class="diferenciais" aria-label="Nossos diferenciais">
+
+            <div class="diferencial">
+                <strong><img class="icone-texto" src="img/icones/check.svg" alt=""> Qualidade</strong>
+                <p>Itens testados e funcionando</p>
+            </div>
+
+            <div class="diferencial">
+                <strong><img class="icone-texto" src="img/icones/moedas.svg" alt=""> Economia</strong>
+                <p>Equipamentos duráveis por menos</p>
+            </div>
+
+            <div class="diferencial">
+                <strong><img class="icone-texto" src="img/icones/folha.svg" alt=""> Sustentabilidade</strong>
+                <p>Menos lixo eletrônico descartado</p>
+            </div>
+
+        </section>
+
+        <!-- ANTES E DEPOIS: resultado do nosso trabalho -->
+        <section class="conteudo">
+            <h2>Do sucateado ao pronto para o mercado</h2>
+
+            <p class="subtitulo">
+                Veja como um lote muda depois de passar pelo nosso processo.
+            </p>
+
+            <figure class="destaque">
+                <img src="img/geral.webp"
+                     alt="Comparação entre lotes sucateados e recondicionados de teclados, mouses, headsets e monitores, com as etapas do processo: recebimento e triagem, limpeza e manutenção, testes de funcionamento, embalagem segura e lote pronto para o mercado"
+                     width="1312" height="1199" loading="lazy">
+                <figcaption>
+                    À esquerda, o estado em que os itens chegam. À direita, o lote
+                    recondicionado, pronto para o mercado.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- PRODUTOS: lotes recondicionados -->
+        <section class="conteudo" id="produtos">
+            <h2>Nossos produtos</h2>
+
+            <p class="subtitulo">
+                Lotes recondicionados para empresas, escolas e revendedores.
+            </p>
+
+            <div class="cartoes">
+
+                <!-- Produto 1: teclados -->
+                <article class="cartao produto">
+                    <img src="img/teclados.webp"
+                         alt="Teclados sucateados de um lado e lote de teclados recondicionados, limpos e testados, do outro"
+                         width="1536" height="1024" loading="lazy">
+                    <div class="texto">
+                        <h3>Teclados recondicionados</h3>
+                        <p>
+                            Teclados com marcas de uso e teclas faltando são limpos,
+                            reparados e testados. Voltam completos, funcionando e
+                            com o cabo organizado.
+                        </p>
+                        <!-- ?assunto= já deixa o assunto escolhido no formulário -->
+                        <a href="fale.html?assunto=teclados" class="botao">Solicitar orçamento →</a>
+                    </div>
+                </article>
+
+                <!-- Produto 2: notebooks -->
+                <article class="cartao produto">
+                    <img src="img/notebooks.jpg"
+                         alt="Lote de notebooks sucateados e lote de notebooks recondicionados, em caixas, prontos para venda"
+                         width="1024" height="559" loading="lazy">
+                    <div class="texto">
+                        <h3>Notebooks recondicionados</h3>
+                        <p>
+                            Notebooks descartados são avaliados e reparados em
+                            bancada por nossa equipe técnica e entregues em
+                            lotes, prontos para venda.
+                        </p>
+                        <a href="fale.html?assunto=notebooks" class="botao">Solicitar orçamento →</a>
+                    </div>
+                </article>
+
+                <!-- Produto 3: servidores -->
+                <article class="cartao produto">
+                    <img src="img/servidores.jpg"
+                         alt="Lote de servidores e componentes descartados e lote de servidores recondicionados, embalados e prontos para venda"
+                         width="1024" height="559" loading="lazy">
+                    <div class="texto">
+                        <h3>Servidores recondicionados</h3>
+                        <p>
+                            Servidores e componentes são recuperados, testados
+                            e embalados, uma opção de menor custo para a
+                            infraestrutura de empresas.
+                        </p>
+                        <a href="fale.html?assunto=servidores" class="botao">Solicitar orçamento →</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SERVIÇOS: etapas do processo -->
+        <section class="conteudo" id="servicos">
+            <h2>Nossos serviços</h2>
+
+            <p class="subtitulo">
+                Cada lote passa pelas mesmas cinco etapas, do recebimento à entrega.
+            </p>
+
+            <div class="cartoes">
+
+                <!-- Etapa 1 -->
+                <div class="cartao">
+                    <img class="icone" src="img/icones/reciclar.svg" alt="">
+                    <h3>Recebimento e triagem</h3>
+                    <p>
+                        Recebemos o lixo eletrônico e separamos o que pode ser
+                        recondicionado do que será reciclado.
+                    </p>
+                </div>
+
+                <!-- Etapa 2 -->
+                <div class="cartao">
+                    <img class="icone" src="img/icones/ferramenta.svg" alt="">
+                    <h3>Limpeza e manutenção</h3>
+                    <p>
+                        Higienização, troca de peças e reparos para devolver
+                        o aspecto e o funcionamento dos equipamentos.
+                    </p>
+                </div>
+
+                <!-- Etapa 3 -->
+                <div class="cartao">
+                    <img class="icone" src="img/icones/engrenagem.svg" alt="">
+                    <h3>Testes de funcionamento</h3>
+                    <p>
+                        Cada item é testado antes de seguir. Só sai o que está
+                        limpo e funcionando.
+                    </p>
+                </div>
+
+                <!-- Etapa 4 -->
+                <div class="cartao">
+                    <img class="icone" src="img/icones/escudo.svg" alt="">
+                    <h3>Embalagem segura</h3>
+                    <p>
+                        Os itens são embalados com cuidado para chegar ao
+                        destino sem danos.
+                    </p>
+                </div>
+
+                <!-- Etapa 5 -->
+                <div class="cartao">
+                    <img class="icone" src="img/icones/caixa.svg" alt="">
+                    <h3>Lote pronto para o mercado</h3>
+                    <p>
+                        Entregamos o lote organizado e identificado, pronto
+                        para venda ou uso.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CHAMADA: direciona o visitante para o contato -->
+        <section class="chamada">
+
+            <div>
+                <h2>Tem eletrônicos parados na sua empresa?</h2>
+                <p>
+                    Fale com a gente e descubra como transformar o descarte
+                    em novas oportunidades.
+                </p>
+            </div>
+
+            <a href="fale.html?assunto=descarte" class="botao">Fale conosco →</a>
+
+        </section>
+
+    </main>
 
     <!-- RODAPÉ: mantém o padrão visual e os caminhos das páginas -->
     <footer>
         <p><strong>DigitaU Eletrônicos</strong></p>
         <p>Tecnologia, inovação e sustentabilidade.</p>
-        <p>
-            <a href="index.html" style="color: #CFCFCF;">Home</a> |
-            <a href="quem.html" style="color: #CFCFCF;">Quem Somos</a> |
-            <a href="produtos.html" style="color: #CFCFCF;">Produtos e Serviços</a> |
-            <a href="fale.html" style="color: #CFCFCF;">Contato</a>
-        </p>
+        <nav class="rodape-links" aria-label="Links do rodapé">
+            <a href="index.html">Home</a>
+            <a href="quem.html">Quem Somos</a>
+            <a href="produtos.html">Produtos e Serviços</a>
+            <a href="fale.html">Contato</a>
+        </nav>
         <p>© 2026 DigitaU Eletrônicos. Todos os direitos reservados.</p>
     </footer>
 

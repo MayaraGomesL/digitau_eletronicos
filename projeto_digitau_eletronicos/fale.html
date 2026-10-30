@@ -3,10 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>..:: Fale Conosco ::..</title>
+    <meta name="description" content="Fale com a DigitaU Eletrônicos: peça um orçamento de lotes recondicionados ou conte quais eletrônicos sua empresa quer destinar.">
+    <title>Contato | DigitaU Eletrônicos</title>
+    <link rel="icon" href="img/logo/digitau-simbolo.svg" type="image/svg+xml">
+
+    <!-- Estilos: primeiro os comuns, depois os exclusivos desta página -->
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/contato.css">
+
+    <!-- defer: o script roda depois que o HTML foi carregado -->
+    <script src="js/jscript1.js" defer></script>
 </head>
+
 <body>
-<h1>Fale Conosco</h1>
-<a href="index.html">Index</a><br>        
+
+    <a class="pular-conteudo" href="#principal">Pular para o conteúdo</a>
+
+    <!-- CABEÇALHO: mantém a mesma marca e navegação da Home -->
+    <header>
+        <a class="logo" href="index.html">
+            <img src="img/logo/digitau-logo.svg" alt="DigitaU Eletrônicos - página inicial" width="162" height="52">
+        </a>
+
+        <nav class="menu" aria-label="Menu principal">
+            <a href="index.html">Home</a>
+            <a href="quem.html">Quem Somos</a>
+            <a href="produtos.html">Produtos e Serviços</a>
+            <a href="fale.html" aria-current="page">Contato</a>
+        </nav>
+    </header>
+
+    <main id="principal">
+
+        <!-- APRESENTAÇÃO: convite para o contato -->
+        <section class="inicio">
+            <span class="etiqueta">FALE CONOSCO</span>
+
+            <h1>
+                Vamos dar um <span>novo destino</span>
+                aos seus eletrônicos
+            </h1>
+
+            <p>
+                Peça um orçamento de lotes recondicionados ou conte quais
+                equipamentos a sua empresa quer destinar. Respondemos pelo
+                e-mail informado.
+            </p>
+        </section>
+
+        <!-- CONTATO: formulário e outros canais -->
+        <section class="conteudo">
+            <div class="contato-grade">
+
+                <!-- FORMULÁRIO: o envio é tratado em js/jscript1.js -->
+                <form class="formulario" id="form-contato">
+                    <h2>Envie sua mensagem</h2>
+                    <!-- O asterisco é só visual: o atributo "required" já avisa o leitor de tela -->
+                    <p class="nota" aria-hidden="true"><span class="obrigatorio">*</span> Campo obrigatório</p>
+
+                    <div class="campo">
+                        <label for="nome">Nome <span class="obrigatorio" aria-hidden="true">*</span></label>
+                        <input type="text" id="nome" name="nome" autocomplete="name" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail <span class="obrigatorio" aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" autocomplete="organization">
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Assunto <span class="obrigatorio" aria-hidden="true">*</span></label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="teclados">Orçamento: teclados e periféricos</option>
+                            <option value="notebooks">Orçamento: notebooks</option>
+                            <option value="servidores">Orçamento: servidores</option>
+                            <option value="descarte">Quero destinar eletrônicos da minha empresa</option>
+                            <option value="outro">Outro assunto</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem <span class="obrigatorio" aria-hidden="true">*</span></label>
+                        <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="botao">Enviar mensagem →</button>
+
+                    <!-- role="status": o leitor de tela anuncia a confirmação -->
+                    <p class="form-status" id="form-status" role="status"></p>
+                </form>
+
+                <!-- CANAIS: outras formas de falar com a empresa -->
+                <!-- TODO: trocar e-mail e telefone pelos dados reais do grupo -->
+                <div class="canais">
+                    <h2>Outros canais</h2>
+
+                    <ul class="lista-canais">
+                        <li>
+                            <img class="icone-texto" src="img/icones/email.svg" alt="">
+                            <div>
+                                <strong>E-mail</strong>
+                                <a href="mailto:contato@digitau.com.br">contato@digitau.com.br</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img class="icone-texto" src="img/icones/telefone.svg" alt="">
+                            <div>
+                                <strong>Telefone e WhatsApp</strong>
+                                <a href="tel:+551140000000">(11) 4000-0000</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img class="icone-texto" src="img/icones/relogio.svg" alt="">
+                            <div>
+                                <strong>Horário de atendimento</strong>
+                                Segunda a sexta, das 8h às 18h
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ: mantém o padrão visual e os caminhos das páginas -->
+    <footer>
+        <p><strong>DigitaU Eletrônicos</strong></p>
+        <p>Tecnologia, inovação e sustentabilidade.</p>
+        <nav class="rodape-links" aria-label="Links do rodapé">
+            <a href="index.html">Home</a>
+            <a href="quem.html">Quem Somos</a>
+            <a href="produtos.html">Produtos e Serviços</a>
+            <a href="fale.html">Contato</a>
+        </nav>
+        <p>© 2026 DigitaU Eletrônicos. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>

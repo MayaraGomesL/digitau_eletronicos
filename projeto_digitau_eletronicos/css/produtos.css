@@ -1,0 +1,55 @@
+/* =========================================================
+   Produtos e Serviços (produtos.html) – estilos exclusivos
+   ========================================================= */
+
+/* Imagem de destaque (antes e depois dos lotes) */
+.destaque {
+    max-width: 900px;
+    margin: 35px auto 0;
+}
+
+.destaque img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+}
+
+.destaque figcaption {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Cartão de produto: imagem no topo, sem recortar a foto */
+.produto {
+    width: 320px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;            /* ignora o atributo height do HTML */
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    background: var(--cor-fundo-escuro);
+    display: block;
+}
+
+.produto .texto {
+    padding: 24px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.produto .texto p {
+    margin-bottom: 20px;
+}
+
+.produto .botao {
+    margin-top: auto;
+    align-self: flex-start;
+}
