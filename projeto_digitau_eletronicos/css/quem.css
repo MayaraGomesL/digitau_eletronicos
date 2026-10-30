@@ -1,0 +1,33 @@
+/* =========================================================
+   Quem Somos (quem.html) – estilos exclusivos desta página
+   ========================================================= */
+
+/* Cartões da equipe */
+.membro {
+    text-align: center;
+}
+
+.iniciais {
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--cor-azul);
+    color: var(--cor-titulo);
+    border: 2px solid var(--cor-verde);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto 18px;
+}
+
+.membro h3 {
+    color: var(--cor-titulo);
+}
+
+.membro .cargo {
+    color: var(--cor-verde);
+    margin: 8px 0 12px;
+    font-size: 13px;
+}

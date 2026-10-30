@@ -1,0 +1,132 @@
+/* =========================================================
+   Contato (fale.html) – estilos exclusivos desta página
+   ========================================================= */
+
+/* Formulário à esquerda, canais de contato à direita */
+.contato-grade {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: left;
+}
+
+.formulario,
+.canais {
+    background: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 32px;
+}
+
+.formulario {
+    flex: 1 1 420px;
+    max-width: 620px;
+}
+
+.canais {
+    flex: 1 1 260px;
+    max-width: 360px;
+}
+
+.contato-grade h2 {
+    font-size: 24px;
+}
+
+.nota {
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+/* Campos do formulário */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--cor-titulo);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.obrigatorio {
+    color: var(--cor-dourado);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: var(--cor-fundo-escuro);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-azul-claro);
+    border-radius: 6px;
+    font-size: 16px;         /* 16px evita o zoom automático no iPhone */
+}
+
+.campo textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--cor-verde);
+}
+
+/* Mensagem de confirmação após o envio */
+.form-status {
+    margin-top: 16px;
+    color: var(--cor-verde);
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.form-status:empty {
+    display: none;
+}
+
+/* Lista de canais de contato */
+.lista-canais {
+    list-style: none;
+    margin-top: 8px;
+}
+
+.lista-canais li {
+    display: flex;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    line-height: 1.6;
+}
+
+.lista-canais li:last-child {
+    border-bottom: none;
+}
+
+.lista-canais strong {
+    display: block;
+    color: var(--cor-titulo);
+}
+
+.lista-canais a {
+    color: var(--cor-verde);
+}
+
+.lista-canais a:hover {
+    color: var(--cor-dourado);
+}
+
+/* Ajustes para celulares */
+@media (max-width: 700px) {
+    .formulario,
+    .canais {
+        padding: 24px;
+    }
+}

@@ -3,322 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A DigitaU Eletrônicos recondiciona teclados, mouses, headsets, monitores, notebooks e servidores descartados e entrega lotes testados e prontos para uso.">
 
     <!-- Nome da página -->
     <title>DigitaU Eletrônicos | Tecnologia Sustentável</title>
     <link rel="icon" href="img/logo/digitau-simbolo.svg" type="image/svg+xml">
 
-    <style>
-        /* Configurações gerais da página */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Fundo e cores principais */
-        body {
-            background: #101923;
-            color: #CFCFCF;
-        }
-
-        /* Cabeçalho com menu */
-        header {
-            background: #172633;
-            padding: 22px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            border-bottom: 1px solid #4D7A8F;
-        }
-
-        /* Nome da empresa */
-        /* Logo da empresa (link para a Home) */
-        .logo {
-            display: block;
-        }
-
-        .logo img {
-            display: block;
-            height: 52px;
-            width: auto;
-        }
-
-        /* Links de navegação */
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        nav a {
-            color: #CFCFCF;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #76A270;
-        }
-
-        /* Área principal de apresentação */
-        .inicio {
-            padding: 90px 7%;
-            background: linear-gradient(120deg, #172633, #1A4785);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        /* Texto principal */
-        .apresentacao {
-            max-width: 600px;
-        }
-
-        /* Pequeno destaque acima do título */
-        .etiqueta {
-            color: #76A270;
-            letter-spacing: 3px;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .inicio h2 {
-            font-size: 42px;
-            color: white;
-            margin: 20px 0;
-            line-height: 1.2;
-        }
-
-        .inicio h2 span {
-            color: #76A270;
-        }
-
-        .inicio p {
-            line-height: 1.8;
-            margin-bottom: 28px;
-            color: #CFCFCF;
-        }
-
-        /* Botões de navegação */
-        .botao {
-            display: inline-block;
-            background: #76A270;
-            color: #101923;
-            padding: 14px 22px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .botao:hover {
-            background: #CCA846;
-            transform: translateY(-3px);
-        }
-
-        /* Painel decorativo com elementos tecnológicos */
-        .painel {
-            width: 340px;
-            max-width: 100%;
-            padding: 30px;
-            background: rgba(10, 20, 32, 0.65);
-            border: 1px solid #4D7A8F;
-            border-radius: 15px;
-            box-shadow: 0 0 25px rgba(77, 122, 143, 0.2);
-        }
-
-        .painel h3 {
-            color: #76A270;
-            margin-bottom: 22px;
-        }
-
-        .item-tecnologia {
-            padding: 15px 0;
-            border-bottom: 1px solid #344957;
-        }
-
-        .item-tecnologia:last-child {
-            border-bottom: none;
-        }
-
-        .item-tecnologia strong {
-            color: white;
-        }
-
-        .item-tecnologia p {
-            margin: 6px 0 0;
-            font-size: 13px;
-        }
-
-        /* Faixa com os principais diferenciais */
-        .diferenciais {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 30px 7%;
-            background: #172633;
-            border-bottom: 1px solid #344957;
-        }
-
-        .diferencial {
-            text-align: center;
-            min-width: 150px;
-        }
-
-        .diferencial strong {
-            display: block;
-            color: #76A270;
-            font-size: 19px;
-            margin-bottom: 8px;
-        }
-
-        .diferencial p {
-            font-size: 13px;
-        }
-
-        /* Seção de serviços e soluções */
-        .conteudo {
-            padding: 70px 7%;
-            text-align: center;
-        }
-
-        .conteudo h2 {
-            color: white;
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-
-        .subtitulo {
-            max-width: 650px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-
-        /* Organização dos cartões */
-        .cartoes {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 22px;
-            margin-top: 40px;
-        }
-
-        /* Cartões com aparência tecnológica */
-        .cartao {
-            background: #172633;
-            border: 1px solid #344957;
-            border-radius: 12px;
-            padding: 28px;
-            width: 280px;
-            max-width: 100%;
-            text-align: left;
-            transition: 0.3s;
-        }
-
-        .cartao:hover {
-            transform: translateY(-6px);
-            border-color: #76A270;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .icone {
-            font-size: 30px;
-            margin-bottom: 18px;
-        }
-
-        .cartao h3 {
-            color: #76A270;
-            margin-bottom: 12px;
-        }
-
-        .cartao p {
-            line-height: 1.7;
-            font-size: 14px;
-        }
-
-        /* Chamada para conhecer a empresa */
-        .chamada {
-            margin: 0 7% 70px;
-            padding: 35px;
-            background: linear-gradient(100deg, #1A4785, #4D7A8F);
-            border-radius: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
-
-        .chamada h2 {
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .chamada p {
-            line-height: 1.6;
-        }
-
-        /* Rodapé */
-        footer {
-            background: #0B121A;
-            text-align: center;
-            padding: 28px 15px;
-            font-size: 13px;
-            line-height: 2;
-        }
-
-        footer strong {
-            color: #76A270;
-        }
-
-        /* Ajustes para celulares */
-        @media (max-width: 700px) {
-            header {
-                justify-content: center;
-                text-align: center;
-            }
-
-            nav {
-                justify-content: center;
-                gap: 15px;
-            }
-
-            /* Área de toque maior nos links do menu */
-            nav a {
-                display: inline-block;
-                padding: 10px 6px;
-            }
-
-            .inicio {
-                padding: 60px 7%;
-            }
-
-            .inicio h2 {
-                font-size: 32px;
-            }
-
-            .painel {
-                width: 100%;
-            }
-
-            .chamada {
-                padding: 25px;
-                justify-content: center;
-                text-align: center;
-            }
-        }
-    </style>
+    <!-- Estilos: primeiro os comuns, depois os exclusivos desta página -->
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
+
+    <a class="pular-conteudo" href="#principal">Pular para o conteúdo</a>
 
     <!-- CABEÇALHO: identidade visual e navegação -->
     <header>
@@ -326,151 +24,163 @@
             <img src="img/logo/digitau-logo.svg" alt="DigitaU Eletrônicos - página inicial" width="162" height="52">
         </a>
 
-        <nav>
-            <a href="index.html">Home</a>
+        <nav class="menu" aria-label="Menu principal">
+            <a href="index.html" aria-current="page">Home</a>
             <a href="quem.html">Quem Somos</a>
             <a href="produtos.html">Produtos e Serviços</a>
             <a href="fale.html">Contato</a>
         </nav>
     </header>
 
-    <!-- INÍCIO: apresentação principal da empresa -->
-    <section class="inicio">
+    <main id="principal">
 
-        <div class="apresentacao">
-            <span class="etiqueta">TECNOLOGIA COM PROPÓSITO</span>
+        <!-- INÍCIO: apresentação principal da empresa -->
+        <section class="inicio inicio-dividido">
 
-            <h2>
-                O futuro da tecnologia começa com
-                <span>novas possibilidades.</span>
-            </h2>
+            <div class="apresentacao">
+                <span class="etiqueta">TECNOLOGIA COM PROPÓSITO</span>
 
-            <p>
-                Na DigitaU Eletrônicos, acreditamos que a tecnologia
-                descartada pode ganhar uma nova vida. Reaproveitamos
-                materiais eletrônicos para criar soluções úteis,
-                incentivar a inovação e reduzir os impactos ambientais.
+                <h1>
+                    O futuro da tecnologia começa com
+                    <span>novas possibilidades.</span>
+                </h1>
+
+                <p>
+                    Na DigitaU Eletrônicos, acreditamos que a tecnologia
+                    descartada pode ganhar uma nova vida. Reaproveitamos
+                    materiais eletrônicos para criar soluções úteis,
+                    incentivar a inovação e reduzir os impactos ambientais.
+                </p>
+
+                <a href="produtos.html#servicos" class="botao">
+                    Veja nossos serviços →
+                </a>
+            </div>
+
+            <!-- PAINEL: como o trabalho acontece, em três etapas -->
+            <div class="painel">
+                <h2>Como trabalhamos</h2>
+
+                <div class="etapa">
+                    <strong><img class="icone-texto" src="img/icones/reciclar.svg" alt=""> Recebemos e separamos</strong>
+                    <p>Triagem do que volta ao uso e do que vai para a reciclagem.</p>
+                </div>
+
+                <div class="etapa">
+                    <strong><img class="icone-texto" src="img/icones/ferramenta.svg" alt=""> Recondicionamos e testamos</strong>
+                    <p>Limpeza, reparo e teste de cada item, um por um.</p>
+                </div>
+
+                <div class="etapa">
+                    <strong><img class="icone-texto" src="img/icones/caixa.svg" alt=""> Entregamos pronto para uso</strong>
+                    <p>Lote embalado e identificado, pronto para venda ou uso.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- DIFERENCIAIS: resumo das propostas da empresa -->
+        <section class="diferenciais" aria-label="Nossos diferenciais">
+
+            <div class="diferencial">
+                <strong><img class="icone-texto" src="img/icones/reciclar.svg" alt=""> Reciclar</strong>
+                <p>Reduzir o descarte inadequado</p>
+            </div>
+
+            <div class="diferencial">
+                <strong><img class="icone-texto" src="img/icones/engrenagem.svg" alt=""> Reutilizar</strong>
+                <p>Valorizar materiais e componentes</p>
+            </div>
+
+            <div class="diferencial">
+                <strong><img class="icone-texto" src="img/icones/lampada.svg" alt=""> Inovar</strong>
+                <p>Buscar novas soluções tecnológicas</p>
+            </div>
+
+            <div class="diferencial">
+                <strong><img class="icone-texto" src="img/icones/folha.svg" alt=""> Preservar</strong>
+                <p>Contribuir com o meio ambiente</p>
+            </div>
+
+        </section>
+
+        <!-- O QUE ENTREGAMOS: produtos e serviços reais, com link -->
+        <section class="conteudo">
+
+            <h2>O que entregamos</h2>
+
+            <p class="subtitulo">
+                Lotes recondicionados para empresas, escolas e revendedores,
+                com cada item testado antes da entrega.
             </p>
 
-            <a href="produtos.html" class="botao">
-                Veja nossos serviços →
+            <div class="cartoes">
+
+                <!-- Cartão 1: periféricos -->
+                <article class="cartao">
+                    <img class="icone" src="img/icones/teclado.svg" alt="">
+                    <h3>Teclados e periféricos</h3>
+                    <p>
+                        Lotes de teclados, mouses e headsets limpos,
+                        reparados e testados, com os cabos organizados.
+                    </p>
+                    <a href="produtos.html#produtos" class="link-seta">Ver produtos →</a>
+                </article>
+
+                <!-- Cartão 2: notebooks e servidores -->
+                <article class="cartao">
+                    <img class="icone" src="img/icones/notebook.svg" alt="">
+                    <h3>Notebooks e servidores</h3>
+                    <p>
+                        Equipamentos avaliados e reparados em bancada,
+                        uma opção de menor custo para a sua empresa.
+                    </p>
+                    <a href="produtos.html#produtos" class="link-seta">Ver produtos →</a>
+                </article>
+
+                <!-- Cartão 3: processo -->
+                <article class="cartao">
+                    <img class="icone" src="img/icones/check.svg" alt="">
+                    <h3>Triagem e testes</h3>
+                    <p>
+                        Separamos o que pode voltar ao uso e testamos cada
+                        item. Só sai o que está limpo e funcionando.
+                    </p>
+                    <a href="produtos.html#servicos" class="link-seta">Ver serviços →</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CHAMADA: direciona o visitante para conhecer a empresa -->
+        <section class="chamada">
+
+            <div>
+                <h2>Faça parte dessa transformação.</h2>
+                <p>
+                    Conheça nossa proposta e descubra novas formas
+                    de dar valor à tecnologia.
+                </p>
+            </div>
+
+            <a href="quem.html" class="botao">
+                Conheça a DigitaU →
             </a>
-        </div>
 
-        <!-- PAINEL: destaque visual com temas tecnológicos -->
-        <div class="painel">
-            <h3>  DigitaU / Tech  </h3>
+        </section>
 
-            <div class="item-tecnologia">
-                <strong>♻ Reciclagem inteligente</strong>
-                <p>Novos destinos para resíduos eletrônicos.</p>
-            </div>
+    </main>
 
-            <div class="item-tecnologia">
-                <strong>⚙ Reaproveitamento de componentes</strong>
-                <p>Materiais que podem ganhar novas funções.</p>
-            </div>
-
-            <div class="item-tecnologia">
-                <strong>💡 Inovação sustentável</strong>
-                <p>Tecnologia e consciência ambiental juntas.</p>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- DIFERENCIAIS: resumo das propostas da empresa -->
-    <section class="diferenciais">
-
-        <div class="diferencial">
-            <strong>♻ Reciclar</strong>
-            <p>Reduzir o descarte inadequado</p>
-        </div>
-
-        <div class="diferencial">
-            <strong>⚙ Reutilizar</strong>
-            <p>Valorizar materiais e componentes</p>
-        </div>
-
-        <div class="diferencial">
-            <strong>💻 Inovar</strong>
-            <p>Buscar novas soluções tecnológicas</p>
-        </div>
-
-        <div class="diferencial">
-            <strong>🌱 Preservar</strong>
-            <p>Contribuir com o meio ambiente</p>
-        </div>
-
-    </section>
-
-    <!-- SOLUÇÕES: principais áreas de atuação -->
-    <section class="conteudo">
-
-        <h2>Tecnologia que transforma</h2>
-
-        <p class="subtitulo">
-            Nosso projeto busca unir inovação, reaproveitamento
-            de materiais e responsabilidade ambiental para
-            transformar o lixo eletrônico em novas oportunidades.
-        </p>
-
-        <div class="cartoes">
-
-            <!-- Cartão 1: coleta e destinação -->
-            <div class="cartao">
-                <div class="icone">♻️</div>
-                <h3>Reciclagem eletrônica</h3>
-                <p>
-                    Incentivamos o descarte correto de equipamentos
-                    eletrônicos e a destinação adequada dos materiais.
-                </p>
-            </div>
-
-            <!-- Cartão 2: reaproveitamento -->
-            <div class="cartao">
-                <div class="icone">🔌</div>
-                <h3>Reaproveitamento</h3>
-                <p>
-                    Buscamos aproveitar componentes, cabos e outros
-                    materiais para desenvolver novos produtos úteis.
-                </p>
-            </div>
-
-            <!-- Cartão 3: inovação -->
-            <div class="cartao">
-                <div class="icone">💻</div>
-                <h3>Soluções tecnológicas</h3>
-                <p>
-                    Exploramos ideias que conectam tecnologia,
-                    criatividade e sustentabilidade.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CHAMADA: direciona o visitante para conhecer a empresa -->
-    <section class="chamada">
-
-        <div>
-            <h2>Faça parte dessa transformação.</h2>
-            <p>
-                Conheça nossa proposta e descubra novas formas
-                de dar valor à tecnologia.
-            </p>
-        </div>
-
-        <a href="quem.html" class="botao">
-            Conheça a DigitaU →
-        </a>
-
-    </section>
-
-    <!-- RODAPÉ: identificação e encerramento -->
+    <!-- RODAPÉ: identificação e caminhos das páginas -->
     <footer>
         <p><strong>DigitaU Eletrônicos</strong></p>
         <p>Tecnologia, inovação e sustentabilidade.</p>
+        <nav class="rodape-links" aria-label="Links do rodapé">
+            <a href="index.html">Home</a>
+            <a href="quem.html">Quem Somos</a>
+            <a href="produtos.html">Produtos e Serviços</a>
+            <a href="fale.html">Contato</a>
+        </nav>
         <p>© 2026 DigitaU Eletrônicos. Todos os direitos reservados.</p>
     </footer>
 
